@@ -85,7 +85,6 @@ body {
     position: relative;
     transform: rotate(120deg);
     animation: flashBounce 4s infinite ;
-    animation: fade 2s 1;
 }
 
 
