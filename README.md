@@ -26,6 +26,18 @@ After player selects an enemy square CPU retaliates by selecting a random player
 If player square holds a ship and CPU selects correctly color of player ship will change to red to indicate a hit<br>
 
 
+UNRESOLVED BUGS/ISSUES
+
+- Figure out why enemy ships are sometimes doubling up at same location on random deployment function<br>
+- Fix game logic to prevent double clicking on player attack/prevent destroyed enemy ship from changing colors again<br>
+- Fix occasional double clicking on drag/drop for player deployment<br>
+
+STILL NEED TO IMPLEMENT FOR BETTER UX
+
+- Change background color of div if cpu attack misses<br>
+- Add modals for when player destroys enemy<br>
+- Need to build cross-platform responsiveness<br>
+
 
 
 
