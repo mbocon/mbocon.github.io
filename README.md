@@ -13,8 +13,8 @@ Technologies used:
 
 Quick sketch of page layout and code structure:
 
-<img src="CSS/img/draft.jpg" width='350px'><br>
-<img src="CSS/img/psuedo.jpg" width='350px'><br>
+<img src="CSS/img/draft.jpg" width='450px'><br>
+<img src="CSS/img/psuedo.jpg" width='450px' height='350px'><br>
 
 Game flow :
 
