@@ -29,8 +29,8 @@ Game continues until all player ships or all enemy ships are destroyed and the w
 
 UNRESOLVED BUGS/ISSUES :
 
-- Figure out why enemy ships are sometimes doubling up at same location on random deployment function<br>
-- Fix game logic to prevent double clicking on player attack/prevent destroyed enemy ship from changing colors again<br>
+- Figure out why enemy ships are sometimes doubling up at same location on random deployment<br>
+- Fix game logic to prevent double clicking when player attacks to prevent destroyed enemy ship from changing colors again<br>
 - Fix occasional double clicking on drag/drop for player deployment<br>
 
 STILL NEED TO IMPLEMENT FOR BETTER UX :
