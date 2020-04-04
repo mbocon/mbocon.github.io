@@ -264,7 +264,7 @@ $(() => {
 // UNRESOLVED BUGS/ISSUES
 
 // figure out why enemy ships are sometimes doubling up at same location on random deployment function
-// fix game logic to prevent double clicking on player attack 
+// fix game logic to prevent double clicking on player attack/prevent destroyed enemy ship from changing colors again
 // fix occasional double clicking on drag/drop for player deployment 
 
 // STILL NEED TO IMPLEMENT FOR BETTER UX
@@ -272,4 +272,5 @@ $(() => {
 // change background color of div if cpu attack misses
 // add modals for when player destroys 
 // need to build cross-platform responsiveness
+
 

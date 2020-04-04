@@ -11,7 +11,7 @@ Technologies used:
 [jQuery](https://jquery.com/)<br>
 [jQuery UI](https://jqueryui.com/)<br>
 
-Quick sketch:
+Quick sketch of page layout and code structure:
 
 ![](CSS/img/draft.jpg)<br>
 ![](CSS/img/psuedo.jpg)<br>
