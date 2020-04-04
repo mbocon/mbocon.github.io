@@ -5,11 +5,13 @@ https://mbocon.github.io/
 
 Technologies used: 
 
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[jQuery](https://jquery.com/)
-[jQuery UI](https://jqueryui.com/)
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)<br>
+[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)<br>
+[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)<br>
+[jQuery](https://jquery.com/)<br>
+[jQuery UI](https://jqueryui.com/)<br>
+
+
 
 
 
