@@ -1,9 +1,9 @@
 $(() => {
 
+    let playerLocationArr = [];
     let playerVesselsArr = []
-    let randomEnemyShip = '';
     let enemyVesselsArr = [];
-    let playerLocation = [];
+    let randomEnemyShip = '';
     let currentPlayer = 'player1'
     let numArr = []
     for (let i = 0; i < 99; i++) {
@@ -121,7 +121,7 @@ $(() => {
             const $square = $('<div>').addClass('square').addClass(i).text(i).attr('id', i).appendTo($playerBoard);
             $('.child-1').children('.square').droppable({
                 drop: function() {
-                    playerLocation.push($(this).attr('id'))
+                    playerLocationArr.push($(this).attr('id'))
                     playerVesselsArr.push(this)
                     $(this).css('background-color', 'blue')
                 }
@@ -186,8 +186,8 @@ $(() => {
         // cpu selects random number to target
         cpuTarget = Math.floor(Math.random($('.child-1').children('.square').attr('id')) * numArr.length);
         console.log(cpuTarget)
-        for (let i = 0; i < playerLocation.length; i++) {
-            let playerShipLocation = parseInt(playerLocation[i])
+        for (let i = 0; i < playerLocationArr.length; i++) {
+            let playerShipLocation = parseInt(playerLocationArr[i])
             if (cpuTarget === playerShipLocation) {
                 if (playerVesselsArr.length === 5) {
                     playerWasHitModal();
@@ -212,19 +212,19 @@ $(() => {
             if (currentPlayer === 'player1') {
                 // convert id of currentTarget from string to number type
                 let id = parseInt($(event.currentTarget).attr('id'));
-                    // check for match between selected id and enemyVesselsArray
-                    if (enemyVesselsArr.includes(id)) {
-                        let removeThis = enemyVesselsArr.indexOf(id)
-                        $(event.currentTarget).css('background-color', 'red');
-                        enemyVesselsArr.splice(removeThis, 1);
-                        console.log(`${enemyVesselsArr} are the enemy vessels locations`)
-                    } else {
-                        $(event.currentTarget).css('background-color', 'teal');
-                    }
-                    currentPlayer = 'player2'
-                    checkForWin();
-                };
-            });
+                // check for match between selected id and enemyVesselsArray
+                if (enemyVesselsArr.includes(id)) {
+                    let removeThis = enemyVesselsArr.indexOf(id)
+                    $(event.currentTarget).css('background-color', 'red');
+                    enemyVesselsArr.splice(removeThis, 1);
+                    console.log(`${enemyVesselsArr} are the enemy vessels locations`)
+                } else {
+                    $(event.currentTarget).css('background-color', 'teal');
+                }
+                currentPlayer = 'player2'
+                checkForWin();
+            };
+         });
     };
 
     // Check for win
@@ -260,6 +260,32 @@ $(() => {
     };
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // UNRESOLVED BUGS/ISSUES
 
