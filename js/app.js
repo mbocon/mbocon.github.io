@@ -261,8 +261,15 @@ $(() => {
     
 });
 
+// UNRESOLVED BUGS/ISSUES
 
+// figure out why enemy ships are sometimes doubling up at same location on random deployment function
+// fix game logic to prevent double clicking on player attack 
+// fix occasional double clicking on drag/drop for player deployment 
 
-/////// figure out why enemy ships are doubling up at same location or not being spliced properly?
+// STILL NEED TO IMPLEMENT FOR BETTER UX
 
-/// figure out how to change background color of div that is not where player ship is if cpu attack misses
+// change background color of div if cpu attack misses
+// add modals for when player destroys 
+// need to build cross-platform responsiveness
+

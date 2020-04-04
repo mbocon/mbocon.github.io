@@ -13,7 +13,20 @@ Technologies used:
 
 Quick sketch:
 
-![](CSS/img/draft.jpg)
+![](CSS/img/draft.jpg)<br>
+![](CSS/img/psuedo.jpg)<br>
+
+Game flow :
+
+Player 1 starts by dragging and dropping submarines to player grid<br>
+Once player board is set-up Player starts game by targeting/clicking an enemy grid<br>
+If hidden enemy is located on the selected square the background-color of that square will change to red to indicate a hit<br>
+If no enemy is present background-color changes to teal to indicate a miss<br>
+After player selects an enemy square CPU retaliates by selecting a random player square<br>
+If player square holds a ship and CPU selects correctly color of player ship will change to red to indicate a hit<br>
+
+
+
 
 
 
