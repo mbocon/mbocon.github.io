@@ -13,8 +13,8 @@ Technologies used:
 
 Quick sketch of page layout and code structure:
 
-![](CSS/img/draft.jpg =250x250)<br>
-![](CSS/img/psuedo.jpg =250x250)<br>
+<img src="CSS/img/draft.jpg" width='250px'><br>
+<img src="psuedo.jpg" width='250px'><br>
 
 Game flow :
 
