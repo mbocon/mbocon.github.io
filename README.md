@@ -11,7 +11,9 @@ Technologies used:
 [jQuery](https://jquery.com/)<br>
 [jQuery UI](https://jqueryui.com/)<br>
 
+Quick sketch:
 
+![](CSS/img/draft.jpg)
 
 
 
