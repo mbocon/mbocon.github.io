@@ -4,16 +4,10 @@ $(() => {
     let randomEnemyDiv = '';
     let enemyVesselsArr = [];
     let playerLocation = [];
-    // let wrongLocationArr = [];
     let currentPlayer = 'player1'
     let numArr = []
     for (let i = 0; i < 99; i++) {
         numArr.push(i)
-    }
-    
-
-    const makeModals = (num) => {
-
     }
     
 /////////////////////// MODALS ////////////////////////
@@ -79,6 +73,7 @@ $(() => {
         })
     }
 
+    // playe loses modal
     const playerLostModal = () => {
         const $modal5 = $('<div>').attr('id', 'modal-5');
         $('body').append($modal5);
@@ -91,6 +86,7 @@ $(() => {
         });
     }
 
+    // player wins modal
     const playerWinsModal = () => {
         const $modal6 = $('<div>').attr('id', 'modal-6');
         $('body').append($modal6);
@@ -182,55 +178,54 @@ $(() => {
         const $restartBtn = $('<button>').text('Restart').addClass('restartBtn').appendTo($footer);
     };
 
-    //player turn 
+    // Player turn 
     const playerTurn = () => {}
 
-    // computer turn
+    // Computer turn
     const computerTurn = () => {
 
         cpuTarget = Math.floor(Math.random($('.child-1').children('.square').attr('id')) * numArr.length);
         
         console.log(cpuTarget)
         for (let i = 0; i < playerLocation.length; i++) {
-        let playerShipLocation = parseInt(playerLocation[i])
-        if (cpuTarget === playerShipLocation) {
-            if (playerVesselsArr.length === 5) {
-                playerWasHitModal();
-            } else if (playerVesselsArr.length < 5 && playerVesselsArr.length > 0){
-                $('#modal-4').css('display', 'block')
-            } else {
-                playerLostModal()
-            }
-            $(playerVesselsArr[0]).css('background-color', 'red')
-            playerVesselsArr.shift()
-            checkForWin();
-        } else {
-           
-        }
-    }
-        currentPlayer = 'player1'
-}
-
-// Battle function 
-const battle = () => {
-    
-    $('.child-3').children('.square').on('click', (event)=> {
-        if (currentPlayer === 'player1') {
-            // convert id of currentTarget from string to number type
-            let id = parseInt($(event.currentTarget).attr('id'));
-                // check for match between selected id and enemyVesselsArray
-                if (enemyVesselsArr.includes(id)) {
-                    let removeThis = enemyVesselsArr.indexOf(id)
-                    $(event.currentTarget).css('background-color', 'red');
-                    enemyVesselsArr.splice(removeThis, 1);
-                    console.log(`${enemyVesselsArr} are the enemy vessels locations`)
+            let playerShipLocation = parseInt(playerLocation[i])
+            if (cpuTarget === playerShipLocation) {
+                if (playerVesselsArr.length === 5) {
+                    playerWasHitModal();
+                } else if (playerVesselsArr.length < 5 && playerVesselsArr.length > 0){
+                    $('#modal-4').css('display', 'block')
                 } else {
-                    $(event.currentTarget).css('background-color', 'teal');
+                    playerLostModal()
                 }
-                currentPlayer = 'player2'
+                $(playerVesselsArr[0]).css('background-color', 'red')
+                playerVesselsArr.shift()
                 checkForWin();
-            };
-        });
+            } else {
+            
+            }
+        }
+        currentPlayer = 'player1';
+    }
+
+    // Battle function 
+    const battle = () => {
+        $('.child-3').children('.square').on('click', (event)=> {
+            if (currentPlayer === 'player1') {
+                // convert id of currentTarget from string to number type
+                let id = parseInt($(event.currentTarget).attr('id'));
+                    // check for match between selected id and enemyVesselsArray
+                    if (enemyVesselsArr.includes(id)) {
+                        let removeThis = enemyVesselsArr.indexOf(id)
+                        $(event.currentTarget).css('background-color', 'red');
+                        enemyVesselsArr.splice(removeThis, 1);
+                        console.log(`${enemyVesselsArr} are the enemy vessels locations`)
+                    } else {
+                        $(event.currentTarget).css('background-color', 'teal');
+                    }
+                    currentPlayer = 'player2'
+                    checkForWin();
+                };
+            });
     };
 
     const checkForWin = () => {
@@ -242,7 +237,7 @@ const battle = () => {
             return;
         } else {
             computerTurn();
-        }
+        };
     }
 ////////////////// ACTUALLY CREATING THE PAGE //////////////////////////
 
