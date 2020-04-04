@@ -1,7 +1,7 @@
 $(() => {
 
     let playerVesselsArr = []
-    let randomEnemyDiv = '';
+    let randomEnemyShip = '';
     let enemyVesselsArr = [];
     let playerLocation = [];
     let currentPlayer = 'player1'
@@ -73,7 +73,7 @@ $(() => {
         })
     }
 
-    // playe loses modal
+    // player loses modal
     const playerLostModal = () => {
         const $modal5 = $('<div>').attr('id', 'modal-5');
         $('body').append($modal5);
@@ -161,8 +161,8 @@ $(() => {
         };
         // selects 5 random divs from the above grid and store the id number in enemyVesselsArr for onclick battle function
         for (let i = 0; i < 5; i++) {
-            randomEnemyDiv = Math.floor(Math.random($('.child-3').children('.square').attr('id')) * 99);
-            enemyVesselsArr.push(randomEnemyDiv)
+            randomEnemyShip = Math.floor(Math.random($('.child-3').children('.square').attr('id')) * 99);
+            enemyVesselsArr.push(randomEnemyShip)
         };
         console.log(enemyVesselsArr)
     };
@@ -183,9 +183,8 @@ $(() => {
 
     // Computer turn
     const computerTurn = () => {
-
+        // cpu selects random number to target
         cpuTarget = Math.floor(Math.random($('.child-1').children('.square').attr('id')) * numArr.length);
-        
         console.log(cpuTarget)
         for (let i = 0; i < playerLocation.length; i++) {
             let playerShipLocation = parseInt(playerLocation[i])
@@ -201,7 +200,7 @@ $(() => {
                 playerVesselsArr.shift()
                 checkForWin();
             } else {
-            
+                // need to change color of div when cpu misses player sub
             }
         }
         currentPlayer = 'player1';
@@ -228,6 +227,7 @@ $(() => {
             });
     };
 
+    // Check for win
     const checkForWin = () => {
         if (playerVesselsArr.length === 0) {
             playerLostModal();
